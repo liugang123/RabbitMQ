@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14C67332-7322-4967-9F37-6D1FCA00806D}</ProjectGuid>
+    <ProjectGuid>{A74ADE2B-FFD7-4726-AED0-60CC43F15815}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>pulisher.example</RootNamespace>
-    <AssemblyName>pulisher.example</AssemblyName>
+    <RootNamespace>example.consume.bad</RootNamespace>
+    <AssemblyName>example.consume.bad</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

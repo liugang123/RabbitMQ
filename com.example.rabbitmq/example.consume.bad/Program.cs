@@ -6,15 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace consumer.example
+namespace example.consume.bad
 {
     /// <summary>
-    /// 消息消费者实例(正常消费)
+    /// 消息消费者（异常消费端）
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
+            var count = 0;
             // 1.初始化连接工厂
             var factory = new ConnectionFactory()
             {
@@ -44,11 +45,20 @@ namespace consumer.example
                     // 8.触发消费事件
                     consume.Received += (sender, e) =>
                     {
+
                         Console.WriteLine("start consume message !");
                         var message = Encoding.UTF8.GetString(e.Body);
                         Console.WriteLine(message);
-                        // 手动确认机制
-                        channel.BasicAck(e.DeliveryTag, false);
+                        count++;
+                        if (count < 3)
+                        {
+                            // 手动确认机制
+                            channel.BasicAck(e.DeliveryTag, false);
+                        }
+                        else
+                        {
+                            Console.WriteLine("消费端异常，消息未确认");
+                        }
                     };
                     // 9.消费消息
                     // noAck=true:自动消息确认，当消费端接收到消息后，就自动发送ack信号，不管消息是否正确处理完毕
