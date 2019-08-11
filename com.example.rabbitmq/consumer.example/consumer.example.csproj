@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34424D20-FE72-47AD-B52A-08BE6073F4E1}</ProjectGuid>
+    <ProjectGuid>{016FD9C0-4DFD-4623-814E-D621A16597DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>publisher.direct</RootNamespace>
-    <AssemblyName>publisher.direct</AssemblyName>
+    <RootNamespace>consumer.example</RootNamespace>
+    <AssemblyName>consumer.example</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RabbitMQ.Client">
-      <HintPath>..\CommonLib\rabbitMq\RabbitMQ.Client.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
